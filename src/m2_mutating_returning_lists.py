@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  MUTATING  and  RETURNING-NEW  LISTS.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Isaac Harper.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -85,6 +85,8 @@ def run_test_doubler():
 
 
 def doubler(list1, list2):
+    for k in range(list1):
+        print(k * 2)
     """
     Both arguments are lists of integers.  This function:
       -- MUTATEs the first list by doubling each number in the list

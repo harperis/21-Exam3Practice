@@ -37,6 +37,7 @@ def run_test_zero_changer():
 
 
 def zero_changer(tuple_of_lists):
+    sublist =
     """
     What comes in:  A TUPLE of LISTs,
                     where the interior lists contain only integers.

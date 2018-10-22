@@ -109,6 +109,12 @@ def run_test_practice_problem4a():
 
 
 def practice_problem4a(sequence):
+    new_list = []
+    repeats = 3
+    for k in range(len(sequence)):
+        if sequence[k] == sequence[repeats]:
+            new_list = new_list + [k]
+    return new_list
     """
     What comes in: A non-empty sequence.
     What goes out: Returns a list of integers,
@@ -180,6 +186,12 @@ def run_test_practice_problem4b():
 
 
 def practice_problem4b(sequence):
+    biggest_number = 0
+    for k in range(0, len(sequence), 2):
+        if sequence[k] > sequence[biggest_number]:
+            biggest_number = k
+    return sequence[biggest_number]
+
     """
     What comes in:
       A sequence of numbers, where the length of the sequence >= 2.
@@ -197,7 +209,7 @@ def practice_problem4b(sequence):
       :type sequence: (list | tuple) of (float | int)
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -342,6 +354,13 @@ def run_test_practice_problem4d():
 
 
 def practice_problem4d(sequence):
+    sum_all = 0
+    equal_numbers = 0
+    for k in range(len(sequence)):
+        prime_numbers = is_prime(sequence[k])
+        if prime_numbers == True:
+                sum_all = sum_all + sequence[k]
+    return sum_all
     """
     What comes in: A non-empty sequence of integers.
     What goes out: An integer that is the sum of all the items

@@ -76,10 +76,10 @@ def integers(sequence_of_sequences):
     new_list = []
     for j in range(len(sequence_of_sequences)):
         sublist = sequence_of_sequences[j]
-        for k in range(len(sublist)):
-            if k == int:
-                new_list = sublist[k] + []
-            return new_list
+        for i in range(len(sublist)):
+            if sublist[i] == int:
+                new_list = new_list + [i]
+                print(new_list)
 
     """
     Returns a new list that contains all the integers
