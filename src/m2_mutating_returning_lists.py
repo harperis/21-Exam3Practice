@@ -85,8 +85,6 @@ def run_test_doubler():
 
 
 def doubler(list1, list2):
-    for k in range(list1):
-        print(k * 2)
     """
     Both arguments are lists of integers.  This function:
       -- MUTATEs the first list by doubling each number in the list
