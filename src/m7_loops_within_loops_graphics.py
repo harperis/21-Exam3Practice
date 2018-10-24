@@ -65,12 +65,21 @@ def run_test_hourglass():
 
 def hourglass(window, n, point, radius, color):
     original_radius = radius
-
-    for i in range(n):
-        for j in  range(i):
-            new_circle = rg.Circle(rg.Point(x, y), radius)
+    original_point = point
+    original_x = point.x
+    original_y = point.y
+    x = original_x
+    y = original_y
+    for j in range(n):
+        for i in range(j):
+            new_circle = rg.Circle(original_point, original_radius)
+            new_circle.fill_color = color
             new_circle.attach_to(window)
             window.render(0.1)
+            x = x + (radius / 2)
+
+        y = y + 2 * radius
+        x = original_x
     """
     See   hourglass_picture.pdf   in this project for pictures that may
     help you better understand the following specification:

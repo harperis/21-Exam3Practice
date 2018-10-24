@@ -138,9 +138,9 @@ def run_test_practice_problem3():
 
 def practice_problem3(start, n, threshold):
     new_list = []
-    for k in range(start):
+    for k in range(start, 100):
         if math.sin(k) + math.cos(k) > threshold:
-            new_list = new_list + [k]
+            print()
     return new_list
     """
     What comes in:

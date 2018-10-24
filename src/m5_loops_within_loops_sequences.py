@@ -78,7 +78,7 @@ def integers(sequence_of_sequences):
         sublist = sequence_of_sequences[j]
         for i in range(len(sublist)):
             if sublist[i] == int:
-                new_list = new_list + [i]
+                new_list = new_list + sublist[i]
                 print(new_list)
 
     """

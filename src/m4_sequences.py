@@ -110,9 +110,8 @@ def run_test_practice_problem4a():
 
 def practice_problem4a(sequence):
     new_list = []
-    repeats = 3
-    for k in range(len(sequence)):
-        if sequence[k] == sequence[repeats]:
+    for k in range(len(sequence) - 1):
+        if sequence[k + 1] == sequence[k]:
             new_list = new_list + [k]
     return new_list
     """
@@ -140,7 +139,7 @@ def practice_problem4a(sequence):
       :type sequence: list | tuple | string
     """
     ####################################################################
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -355,11 +354,10 @@ def run_test_practice_problem4d():
 
 def practice_problem4d(sequence):
     sum_all = 0
-    equal_numbers = 0
     for k in range(len(sequence)):
         prime_numbers = is_prime(sequence[k])
-        if prime_numbers == True:
-                sum_all = sum_all + sequence[k]
+        if prime_numbers is True:
+            sum_all = sum_all + sequence[k]
     return sum_all
     """
     What comes in: A non-empty sequence of integers.
