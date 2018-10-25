@@ -38,7 +38,7 @@ def main():
 def run_test_integers():
     """ Tests the    integers    function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # Done: 2. Implement this TEST function.
     #   It TESTS the  integers  function defined below.
     #   Include at least ** 1 ** ADDITIONAL test beyond those we wrote.
     #
@@ -71,16 +71,24 @@ def run_test_integers():
     print('Expected is:', expected)
     print('Actual is:  ', answer)
 
+    # Test 2:
+    expected = [1, 2, 3, 4, 5, 6, 7, 8]
+    answer = integers([(1, 2, ''),
+                       (3, 'ughhhh', 4),
+                       ('wer76gfy', 5, 6),
+                       (7, 8, )])
+    print('Expected is:', expected)
+    print('Actual is:  ', answer)
+
 
 def integers(sequence_of_sequences):
     new_list = []
     for j in range(len(sequence_of_sequences)):
         sublist = sequence_of_sequences[j]
-        for i in range(len(sublist)):
-            if sublist[i] == int:
-                new_list = new_list + sublist[i]
-                print(new_list)
-
+        for k in range(len(sublist)):
+            if type(sublist[k]) == int:
+                new_list = new_list + [sublist[k]]
+    return new_list
     """
     Returns a new list that contains all the integers
     in the subsequences of the given sequence, in the order that they
@@ -103,7 +111,7 @@ def integers(sequence_of_sequences):
       :rtype: list of int
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     ####################################################################
@@ -131,7 +139,7 @@ def integers(sequence_of_sequences):
 def run_test_big_letters():
     """ Tests the    big_letters    function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this TEST function.
+    # Done: 4. Implement this TEST function.
     #   It TESTS the  big_letters  function defined below.
     #   Include at least ** 1 ** ADDITIONAL test beyond those we wrote.
     # ------------------------------------------------------------------
@@ -167,8 +175,28 @@ def run_test_big_letters():
     print('Expected is:', expected)
     print('Actual is:  ', answer)
 
+    # Test 2:
+    expected = 'ISAAC'
+    answer = big_letters(['I need to sleep',
+                          'So i cAn',
+                          [10, 71827, 'hi'],
+                          'Ace this exam',
+                          [],
+                          'and i will pass this Class'])
+    print('Expected is:', expected)
+    print('Actual is:  ', answer)
+
 
 def big_letters(sequence_of_sequences):
+    new_string = ''
+    for j in range(len(sequence_of_sequences)):
+        if type(sequence_of_sequences[j]) == str:
+            sublist = sequence_of_sequences[j]
+            for k in range(len(sublist)):
+                if sublist[k].isupper() is True:
+                    new_string = new_string + sublist[k]
+    return new_string
+
     """
     Returns a new STRING that contains all the upper-case letters
     in the subsequences of the given sequence that are strings,
@@ -197,7 +225,7 @@ def big_letters(sequence_of_sequences):
     Precondition:  the given argument is a sequence of sequences.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # Done: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     ####################################################################

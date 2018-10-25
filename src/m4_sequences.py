@@ -355,8 +355,7 @@ def run_test_practice_problem4d():
 def practice_problem4d(sequence):
     sum_all = 0
     for k in range(len(sequence)):
-        prime_numbers = is_prime(sequence[k])
-        if prime_numbers is True:
+        if is_prime(sequence[k]) is True:
             sum_all = sum_all + sequence[k]
     return sum_all
     """
